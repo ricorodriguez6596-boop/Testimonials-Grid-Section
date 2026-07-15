@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =================== */
+
+
+:root {
+    /* Color */
+    --color-purple-normal: #7541c8;
+    --color-purple-light: #c4a2f6;
+    --color-purple-lightest: #eee5ff;
+    --color-grey-dark: #48556a;
+    --color-grey-normal: #676d7e;
+    --color-grey-light: #cfcfcf;
+    --color-grey-lightest: #e7eaee;
+    --color-box-shadow: rgba(46, 46, 55, 0.166);
+
+    --color-white: #ffffff;
+    --color-black: #121212;
+    --color-dark-blue: #19212e;
+
+    /* Font Size */
+    --Font-10: 0.625rem;
+    --Font-12: 0.75rem;
+    --Font-14: 0.875rem;
+    --Font-16: 1rem;
+    --Font-18: 1.125rem;
+    --Font-20: 1.25rem;
+    --Font-22: 1.375rem;
+    --Font-24: 1.5rem;
+    --Font-26: 1.625rem;
+    --Font-28: 1.75rem;
+    --Font-30: 1.875rem;
+    --Font-32: 2rem;
+    --Font-Family: "Barlow Semi Condensed", sans-serif;
+
+    /* Spacing */
+    --Spacing-2: 0.125rem;
+    --Spacing-8: 0.5rem;
+    --Spacing-12: 0.75rem;
+    --Spacing-16: 1rem;
+    --Spacing-20: 1.25rem;
+    --Spacing-24: 1.5rem;
+    --Spacing-28: 1.75rem;
+    --Spacing-32: 2rem;
+
+}
+
+/* ===================== */
+
+
+
+body {
+    background-color: var(--color-grey-lightest);
+    font-family: var(--Font-Family);
+}
+
+/* ===================== */
+
+
+
+
+
+
+
+
+/* universal grid styles */
+.grid-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.3rem 3rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    gap: var(--Spacing-32);
+    max-width: 1200px;
+    grid-template-areas:
+        'clifford clifford walters kira'
+        'harmon abrams abrams kira';
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--Spacing-12);
+    padding: var(--Spacing-32);
+    border-radius: 8px;
+    box-shadow: 40px 50px 30px var(--color-box-shadow);
+    position: relative;
+}
+
+.grid-item-img-area {
+    display: flex;
+    gap: var(--Spacing-16);
+    align-items: center;
+}
+
+.grid-item-img {
+    width: 34px;
+    height: 34px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.grid-item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.grid-item-name-area {
+    display: flex;
+    flex-direction: column;
+    gap: var(--Spacing-2);
+}
+
+.grid-item-name {
+    font-size: var(--Font-14);
+}
+
+.grid-item-varify {
+    font-size: var(--Font-12);
+}
+
+.grid-item-main-txt {
+    font-size: var(--Font-22);
+    font-weight: 500;
+
+}
+
+.grid-item-descrip-txt {
+    font-size: var(--Font-14);
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+/* ===================== */
+
+
+
+
+
+/* Individual Itesm Styles */
+
+/* Clifford */
+.clifford {
+    background-color: var(--color-purple-normal);
+    grid-area: clifford;
+}
+
+.clifford .grid-item-img {
+    border: 2px solid var(--color-purple-light);
+}
+
+.clifford .grid-item-name {
+    color: var(--color-white);
+}
+
+.clifford .grid-item-varify {
+    color: var(--color-white);
+    color: var(--color-grey-lightest);
+}
+
+.clifford .grid-item-main-txt {
+    position: relative;
+    color: var(--color-grey-lightest);
+    z-index: 8;
+}
+
+.clifford .grid-item-descrip-txt {
+    color: var(--color-grey-light);
+}
+
+.clifford-bg-img {
+    position: absolute;
+    top: 0;
+    right: 54px;
+}
+
+
+
+
+/* Walters */
+.walters {
+    background-color: var(--color-grey-dark);
+    grid-area: walters;
+    z-index: 2;
+}
+
+.walters .grid-item-name {
+    color: var(--color-white);
+
+}
+
+.walters .grid-item-varify {
+    color: var(--color-grey-lightest);
+}
+
+.walters .grid-item-main-txt {
+    color: var(--color-grey-lightest);
+}
+
+.walters .grid-item-descrip-txt {
+    color: var(--color-grey-light);
+}
+
+
+
+
+
+/* Kira */
+.kira {
+    background-color: var(--color-white);
+    grid-area: kira;
+    z-index: 20;
+}
+
+.kira .grid-item-name {
+    color: var(--color-dark-blue);
+    font-weight: 500;
+}
+
+.kira .grid-item-varify {
+    color: var(--color-grey-dark);
+    font-weight: 500;
+}
+
+.kira .grid-item-main-txt {
+    color: var(--color-grey-dark);
+}
+
+.kira .grid-item-descrip-txt {
+    color: var(--color-grey-normal);
+}
+
+
+
+
+/* Harmon */
+.harmon {
+    background-color: var(--color-white);
+    grid-area: harmon;
+    z-index: 8;
+
+}
+
+.harmon .grid-item-name {
+    color: var(--color-dark-blue);
+    font-weight: 500;
+}
+
+.harmon .grid-item-varify {
+    color: var(--color-grey-dark);
+    font-weight: 500;
+}
+
+.harmon .grid-item-main-txt {
+    color: var(--color-grey-dark);
+}
+
+.harmon .grid-item-descrip-txt {
+    color: var(--color-grey-normal);
+}
+
+
+
+
+
+
+/* Abrams */
+.abrams {
+    background-color: var(--color-dark-blue);
+    grid-area: abrams;
+    z-index: 14;
+}
+
+.abrams .grid-item-name {
+    color: var(--color-white);
+
+}
+
+.abrams .grid-item-varify {
+    color: var(--color-grey-light);
+}
+
+.abrams .grid-item-main-txt {
+    color: var(--color-grey-light);
+}
+
+.abrams .grid-item-descrip-txt {
+    color: var(--color-grey-light);
+}
+
+/* ================== */
+
+
+
+
+
+
+
+
+/* Media-Querries */
+
+@media (max-width:71.875em) {
+    .grid-section {
+        padding-inline: 2.5rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        grid-template-areas:
+            'clifford clifford walters'
+            'harmon abrams abrams'
+            'kira kira kira'
+        ;
+    }
+}
+
+
+@media (max-width:50em) {
+    .grid-section {
+        padding-inline: 2rem;
+    }
+
+    .grid-item-main-txt {
+        font-size: var(--Font-20);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        grid-template-areas:
+            'clifford clifford walters'
+            'harmon abrams abrams'
+            'kira kira kira'
+        ;
+    }
+}
+
+
+@media (max-width:43.75em) {
+    .clifford-bg-img {
+        display: none;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+        grid-template-areas:
+            'clifford '
+            'walters'
+            'harmon'
+            'abrams'
+            'kira';
+    }
+}
+
+/* =====================     */
+
+
+
+
+/* Footer */
+footer {
+    color: rgba(0, 0, 0, 0.404);
+    font-weight: 600;
+    text-align: center;
+}
+.footer-link{
+    color: #6905f669;
+}
