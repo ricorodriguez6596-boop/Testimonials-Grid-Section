@@ -21,6 +21,9 @@
     --color-white: #ffffff;
     --color-black: #121212;
     --color-dark-blue: #19212e;
+    --color-footer: rgba(0, 0, 0, 0.404);
+    --color-footer-link: #6905f669;
+
 
     /* Font Size */
     --Font-10: 0.625rem;
@@ -62,7 +65,15 @@ body {
 
 
 
-
+.visually-hidden-heading{
+    position: absolute;
+     border: 1px solid;
+     width: 1px;
+     height: 1px;
+     overflow: hidden;
+     margin: -1px;
+}
+/* ====================== */
 
 
 
@@ -79,7 +90,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, minmax(100px, 1fr));
     gap: var(--Spacing-32);
-    max-width: 1200px;
+    max-width: 75rem;
     grid-template-areas:
         'clifford clifford walters kira'
         'harmon abrams abrams kira';
@@ -164,7 +175,6 @@ body {
 }
 
 .clifford .grid-item-varify {
-    color: var(--color-white);
     color: var(--color-grey-lightest);
 }
 
@@ -368,10 +378,10 @@ body {
 
 /* Footer */
 footer {
-    color: rgba(0, 0, 0, 0.404);
+    color: var(--color-footer);
     font-weight: 600;
     text-align: center;
 }
 .footer-link{
-    color: #6905f669;
+    color: var(--color-footer-link);
 }
